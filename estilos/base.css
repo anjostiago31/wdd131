@@ -175,10 +175,10 @@ text-align: justify;
 /* LEGENDA DA BANDEIRA */
 
 .legenda {
-font-size: 0.7rem;
-text-align: center;
-color: #8c7ae6;
-margin: 4px 0 0;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #1f4e79;
+    margin: 4px 0 0;
 }
 
 /* RECURSOS WEB DEV */
