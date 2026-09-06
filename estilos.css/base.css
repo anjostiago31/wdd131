@@ -1,20 +1,21 @@
-```css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #222;
 }
 
+/* CABEÇALHO */
+
 header {
-    background-color: #1f4e79;
+    background-color: #8c7ae6;
     color: white;
-    padding: 2rem;
     text-align: center;
 }
 
@@ -22,25 +23,61 @@ header h1 {
     margin: 0 0 1.5rem;
 }
 
+/* MENU */
+
 nav {
+    background-color: #353b48;
     display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 1rem;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #333;
+    border-radius: 5px;
 }
 
+/* SOBRE MIM */
+
+.sobre-mim-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sobre-mim-texto {
+    flex: 1;
+}
+
+.sobre-mim-texto p {
+    text-align: justify;
+}
+
+.sobre-mim-imagem {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+/* CONTEÚDO PRINCIPAL */
+
 main {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
@@ -49,6 +86,21 @@ main > h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
+
+/* DUAS COLUNAS */
+
+.conteudo-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.conteudo-principal .card {
+    height: 100%;
+}
+
+/* CARDS */
 
 .card {
     background-color: white;
@@ -61,19 +113,99 @@ main > h1 {
 
 .card h2 {
     color: #1f4e79;
-    border-bottom: 2px solid #1f4e79;
-    padding-bottom: 0.5rem;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #9c88ff;
+    border-radius: 6px;
+    padding: 0.6rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
-.card img {
+.card h2:nth-of-type(2) {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #1f4e79;
+    border-radius: 0;
+    padding: 0.5rem 0;
+}
+
+/* FOTO DE PERFIL */
+
+.foto-perfil {
     width: 200px;
     height: auto;
     display: block;
     margin: 1rem auto;
 }
 
+/* BRASIL */
+
+.brasil-conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.brasil-imagem {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.brasil-imagem img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.brasil-texto {
+    flex: 1;
+}
+
+.brasil-texto p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* LEGENDA DA BANDEIRA */
+
+.legenda {
+    font-size: 0.7rem;
+    text-align: center;
+    color: #666;
+    margin: 4px 0 0;
+}
+
+/* RECURSOS WEB DEV */
+
+.recursos {
+    margin-bottom: 0;
+}
+
+.recursos ul {
+    padding-left: 20px;
+}
+
+.recursos li {
+    margin-bottom: 10px;
+}
+
+.recursos a {
+    color: #1f4e79;
+    text-decoration: none;
+}
+
+.recursos a:hover {
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+
 footer {
-    background-color: #1f4e79;
+    background-color: #8c7ae6;
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -83,4 +215,26 @@ footer {
 footer p {
     margin: 0.5rem;
 }
-```
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .conteudo-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .brasil-conteudo {
+        flex-direction: column;
+    }
+
+    .brasil-imagem {
+        width: 100%;
+        text-align: center;
+    }
+
+    .brasil-imagem img {
+        margin: 0 auto;
+    }
+}
+
