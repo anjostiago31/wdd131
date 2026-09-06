@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Tiago dos Anjos de Oliveira</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Tiago dos Anjos de Oliveira. Página acadêmica com informações sobre desenvolvimento web, HTML, CSS, JavaScript e projetos da disciplina.">
+    <meta name="author" content="Tiago dos Anjos de Oliveira">
+    <link rel="stylesheet" href="estilos.css/base.css">
+    <script src="obterdatas.js" defer></script>
 </head>
-<body>
-    <h1>Tiago dos Anjos</h1>
 
-    <p> Software Developer</p>
-    
+<body>
+
+    <header>
+        <h1>WDD 131 - Fundamentos da Web Dinâmica</h1>
+
+        <nav>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures?lang=por" target="_blank">Escrituras</a>
+            <a href="#">Projeto Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tiago dos Anjos de Oliveira</h1>
+
+        <section class="card">
+            <h2>Sobre Mim</h2>
+
+            <img src="images/profile.jpg" alt="Foto de Tiago dos Anjos de Oliveira">
+
+            <p>
+                Meu nome é Tiago dos Anjos de Oliveira. Sou estudante da área de
+                tecnologia e estou aprendendo sobre desenvolvimento web, HTML,
+                CSS e JavaScript. Nesta disciplina, estou desenvolvendo
+                conhecimentos importantes sobre a criação e organização de
+                páginas web dinâmicas.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Brasil</h2>
+
+            <img src="images/brasil.jpg" alt="Paisagem representando o Brasil">
+
+            <p>
+                O Brasil é um país localizado na América do Sul e possui uma
+                grande diversidade cultural, ambiental e geográfica. É o maior
+                país da América do Sul e possui uma das maiores populações do
+                mundo.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="anoatual"></span> Tiago dos Anjos de Oliveira - Garça, SP, Brasil
+        </p>
+
+        <p id="ultimaModificacao"></p>
+    </footer>
+
 </body>
 </html>
