@@ -1,0 +1,22 @@
+@media screen and (min-width: 32rem) {
+  #menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
