@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Ícone de clima parcialmente nublado">
+  <g fill="none" stroke="#F9AE3B" stroke-width="8" stroke-linecap="round">
+    <path d="M145 25v-15"/>
+    <path d="M190 43l11-11"/>
+    <path d="M100 43L89 32"/>
+  </g>
+  <circle cx="145" cy="84" r="48" fill="#F9AE3B"/>
+  <path fill="#8BC5D1" d="M67 211c-32 0-57-25-57-57 0-29 22-53 50-56 10-27 36-46 67-46 34 0 63 24 70 56 3-1 7-1 10-1 27 0 49 22 49 49s-22 49-49 49H67z"/>
+</svg>
