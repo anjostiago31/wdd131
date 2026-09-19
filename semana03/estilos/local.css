@@ -1,0 +1,107 @@
+:root {
+    --verde: #006b3c;
+    --amarelo: #ffdf00;
+    --branco: #ffffff;
+    --texto: #222222;
+    --fundo: #dcefdc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: var(--fundo);
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--verde);
+    color: var(--branco);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    background-color: var(--branco);
+}
+
+picture {
+    display: block;
+}
+
+.hero {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* DADOS */
+
+.dados {
+    text-align: center;
+    padding: 1rem;
+    border-top: 4px solid var(--amarelo);
+}
+
+.dados h2 {
+    margin-bottom: 1rem;
+}
+
+.dados p {
+    margin: 0.4rem 0;
+}
+
+/* CLIMA */
+
+.clima {
+    text-align: center;
+    padding: 1rem;
+}
+
+.clima h2 {
+    margin-bottom: 1rem;
+}
+
+.clima p {
+    margin: 0.4rem 0;
+}
+
+.icone-clima {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: var(--verde);
+    color: var(--branco);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}

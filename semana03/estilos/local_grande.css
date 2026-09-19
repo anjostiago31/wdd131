@@ -1,0 +1,53 @@
+@media screen and (min-width: 700px) {
+
+    header,
+    main,
+    footer {
+        max-width: 1200px;
+    }
+
+    main {
+        position: relative;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .dados,
+    .clima {
+        position: absolute;
+        width: 280px;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .dados {
+        top: 40px;
+        left: 30px;
+    }
+
+    .clima {
+        bottom: 40px;
+        right: 30px;
+    }
+
+    .dados h2,
+    .clima h2 {
+        background-color: var(--verde);
+        color: var(--branco);
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .clima h2::after {
+        content: " ⛅";
+    }
+
+    .icone-clima {
+        display: none;
+    }
+}

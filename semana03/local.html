@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informações sobre a cidade de Garça, São Paulo, Brasil.">
+    <meta name="author" content="Tiago dos Anjos">
+
+    <title>Garça, Brasil</title>
+
+    <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local_grande.css">
+
+    <script src="scripts/local.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Brasil</h1>
+    </header>
+
+    <main>
+
+        <picture>
+            <source srcset="imagens/arara_azul.webp" media="(max-width: 500px)">
+            <source srcset="imagens/arara_azul.webp" media="(max-width: 1000px)">
+            <img
+                class="hero"
+                src="imagens/arara_azul.webp"
+                width="1200"
+                height="600">
+        </picture>
+
+        <section class="dados">
+            <h2>Dados</h2>
+
+            <p><strong>Área:</strong> 8.510.418 km²</p>
+            <p><strong>População:</strong> 213,4 milhões</p>
+            <p><strong>Capital:</strong> Brasilia</p>
+            <p><strong>Idioma:</strong> Português</p>
+            <p><strong>Moeda:</strong> Real (R$)</p>
+            <p><strong>Fuso horário:</strong> UTC−5 a UTC-2</p>
+            <p><strong>Código telefônico:</strong>+55</p>
+            <p><strong>Domínio da Internet:</strong> .br</p>
+        </section>
+
+        <section class="clima">
+            <h2>Clima</h2>
+
+            <img
+                class="icone-clima"
+                src="imagens/clima.svg"
+                alt="Ícone de clima">
+
+            <p><strong>Temperatura:</strong> <span id="temperatura">8</span> °C</p>
+            <p><strong>Condição:</strong> Parcialmente nublado</p>
+            <p><strong>Vento:</strong> <span id="vento">10</span> km/h</p>
+            <p><strong>Sensação térmica:</strong> <span id="sensacao"></span></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="anoAtual"></span> 🌳 Tiago dos Anjos 🌳 Brasil
+        </p>
+
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+</body>
+
+</html>
