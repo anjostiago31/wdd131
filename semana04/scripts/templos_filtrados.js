@@ -58,29 +58,26 @@ const templos = [
   },
 
   {
-    nomeDoTemplo: "São Paulo Brasil",
-    localizacao: "São Paulo, Brasil",
-    consagracao: "1978, 30 de outubro",
-    area: 59246,
-    urlDaImagem: 
-    "https://www.churchofjesuschrist.org/imgs/940f3e201364433a3d5d3dc14b0cacee38d41d1d/full/500%2C/0/default"
-  },
-  {
-    nomeDoTemplo: "Campinas Brasil",
-    localizacao: "Campinas, São Paulo, Brasil",
-    consagracao: "2002, 17 de maio",
-    area: 49459,
-    urlDaImagem: 
-    "https://www.churchofjesuschrist.org/imgs/c9a81a6f86750d7d9ade3499d3df52e2f7f726a7/full/500%2C/0/default"
-  },
-  {
-    nomeDoTemplo: "Curitiba Brasil",
-    localizacao: "Curitiba, Paraná, Brasil",
-    consagracao: "2008, 1 de junho",
-    area: 27850,
-    urlDaImagem: 
-    "https://www.churchofjesuschrist.org/imgs/ea7e0f39c8e26d163a4dfedfcb1ce5c41d650b5b/full/500%2C/0/default"
-  },  
+  nomeDoTemplo: "São Paulo Brasil",
+  localizacao: "São Paulo, Brasil",
+  consagracao: "1978, 30 de outubro",
+  area: 59246,
+  urlDaImagem: "imagens/sao_paulo_brazil_temple_lds.jpeg"
+},
+{
+  nomeDoTemplo: "Campinas Brasil",
+  localizacao: "Campinas, São Paulo, Brasil",
+  consagracao: "2002, 17 de maio",
+  area: 49459,
+  urlDaImagem: "imagens/campinas_brazil_temple_lds.jpeg"
+},
+{
+  nomeDoTemplo: "Curitiba Brasil",
+  localizacao: "Curitiba, Paraná, Brasil",
+  consagracao: "2008, 1 de junho",
+  area: 27850,
+  urlDaImagem: "imagens/curitiba_brazil_temple.jpeg"
+}
 ];
 const gallery = document.querySelector(".gallery");
 
