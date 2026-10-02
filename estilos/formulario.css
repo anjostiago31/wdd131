@@ -1,0 +1,493 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef4ff;
+    color: #222;
+}
+
+
+/* ========================================
+   CABEÇALHO
+   ======================================== */
+
+header {
+    background-color: #5a00d6;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+   ======================================== */
+
+main {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+
+/* ========================================
+   FORMULÁRIO
+   ======================================== */
+
+form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    border-top: 6px solid #0066ff;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ========================================
+   LABELS
+   ======================================== */
+
+label,
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+span {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: #555;
+}
+
+
+/* ========================================
+   CAMPOS
+   ======================================== */
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 2px solid #0066ff;
+    border-radius: 8px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+    background-color: #f8fbff;
+    color: #222;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* ========================================
+   PLACEHOLDERS
+   ======================================== */
+
+input::placeholder,
+textarea::placeholder {
+    color: #666;
+}
+
+
+/* ========================================
+   FOCO DOS CAMPOS
+   ======================================== */
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #ffb800;
+    outline-offset: 2px;
+    border-color: #5a00d6;
+}
+
+
+/* ========================================
+   FIELDSET
+   ======================================== */
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+legend {
+    margin-bottom: 10px;
+    color: #5a00d6;
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   CLASSIFICAÇÃO
+   ======================================== */
+
+.classificacao {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   ESTRELAS
+   ======================================== */
+
+.estrelas {
+    display: flex;
+
+    /*
+       O HTML está na ordem 5 → 1.
+       row-reverse exibe visualmente
+       as estrelas na ordem correta.
+    */
+
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 6px;
+    margin-top: 8px;
+}
+
+
+/* Esconde visualmente os radio buttons */
+
+.estrelas input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+
+    width: 1px;
+    height: 1px;
+
+    margin: 0;
+}
+
+
+/* Aparência padrão das estrelas */
+
+.estrelas label {
+    display: inline-block;
+
+    margin: 0;
+    padding: 2px;
+
+    font-size: 2.6rem;
+    line-height: 1;
+
+    color: #a0a0a0;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ========================================
+   ESTRELAS SELECIONADAS
+   ======================================== */
+
+/*
+   Pinta a estrela selecionada
+   e todas as anteriores.
+*/
+
+.estrelas input[type="radio"]:checked + label,
+.estrelas input[type="radio"]:checked + label ~ label {
+    color: #ffb800;
+}
+
+
+/* ========================================
+   EFEITO AO PASSAR O MOUSE
+   ======================================== */
+
+.estrelas label:hover,
+.estrelas label:hover ~ label {
+    color: #ffb800;
+}
+
+.estrelas label:hover {
+    transform: scale(1.2);
+}
+
+
+/* ========================================
+   ACESSIBILIDADE DAS ESTRELAS
+   ======================================== */
+
+.estrelas input[type="radio"]:focus + label {
+    outline: 3px solid #0066ff;
+    outline-offset: 3px;
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   RECURSOS ÚTEIS
+   ======================================== */
+
+.recursos {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.recursos legend {
+    color: #5a00d6;
+    font-weight: bold;
+}
+
+
+/* Texto explicativo */
+
+.instrucao {
+    margin: 4px 0 14px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* Opções dos recursos */
+
+.recursos label {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+    margin: 12px 0;
+
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+
+/* Checkboxes */
+
+.recursos input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+
+    margin: 0;
+
+    accent-color: #5a00d6;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   BOTÃO ENVIAR
+   ======================================== */
+
+input[type="submit"] {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #0066ff;
+    color: white;
+
+    font-size: 1.05rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Hover do botão */
+
+input[type="submit"]:hover {
+    background-color: #004dcc;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 14px rgba(0, 102, 255, 0.35);
+}
+
+
+/* Clique */
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+/* Foco */
+
+input[type="submit"]:focus {
+    outline: 3px solid #ffb800;
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   PÁGINA DE CONFIRMAÇÃO
+   ======================================== */
+
+.confirmacao {
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    border-top: 6px solid #0066ff;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+
+    text-align: center;
+}
+
+.confirmacao h2 {
+    margin-top: 0;
+    color: #5a00d6;
+}
+
+.confirmacao p {
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   CONTADOR DE AVALIAÇÕES
+   ======================================== */
+
+#contador {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    color: #0066ff;
+}
+
+
+/* ========================================
+   BOTÃO VOLTAR
+   ======================================== */
+
+.botao-voltar {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 13px 22px;
+
+    background-color: #0066ff;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.botao-voltar:hover {
+    background-color: #004dcc;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 14px rgba(0, 102, 255, 0.35);
+}
+
+.botao-voltar:focus {
+    outline: 3px solid #ffb800;
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+
+footer {
+    background-color: #5a00d6;
+    color: white;
+
+    text-align: center;
+
+    padding: 18px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    main {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    form {
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    header {
+        padding: 18px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .estrelas {
+        gap: 4px;
+    }
+
+    .estrelas label {
+        font-size: 2.2rem;
+    }
+
+    .confirmacao {
+        padding: 22px 18px;
+    }
+}
