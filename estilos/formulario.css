@@ -1,6 +1,3 @@
-/* ========================================
-   CONFIGURAÇÕES GERAIS
-   ======================================== */
 
 * {
     box-sizing: border-box;
@@ -14,9 +11,7 @@ body {
 }
 
 
-/* ========================================
-   CABEÇALHO
-   ======================================== */
+/* CABEÇALHO */
 
 header {
     background-color: #5a00d6;
@@ -31,9 +26,7 @@ header h1 {
 }
 
 
-/* ========================================
-   CONTEÚDO PRINCIPAL
-   ======================================== */
+/* CONTEÚDO PRINCIPAL */
 
 main {
     max-width: 600px;
@@ -42,9 +35,7 @@ main {
 }
 
 
-/* ========================================
-   FORMULÁRIO
-   ======================================== */
+/* FORMULÁRIO */
 
 form {
     background-color: #ffffff;
@@ -55,9 +46,7 @@ form {
 }
 
 
-/* ========================================
-   LABELS
-   ======================================== */
+/*  LABELS */
 
 label,
 legend {
@@ -77,9 +66,7 @@ span {
 }
 
 
-/* ========================================
-   CAMPOS
-   ======================================== */
+/* CAMPOS */
 
 select,
 input[type="date"],
@@ -87,13 +74,10 @@ input[type="text"],
 textarea {
     width: 100%;
     padding: 12px;
-
     border: 2px solid #0066ff;
     border-radius: 8px;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-
     background-color: #f8fbff;
     color: #222;
 }
@@ -104,9 +88,7 @@ textarea {
 }
 
 
-/* ========================================
-   PLACEHOLDERS
-   ======================================== */
+/* PLACEHOLDERS */
 
 input::placeholder,
 textarea::placeholder {
@@ -114,9 +96,7 @@ textarea::placeholder {
 }
 
 
-/* ========================================
-   FOCO DOS CAMPOS
-   ======================================== */
+/* FOCO DOS CAMPOS */
 
 input[type="text"]:focus,
 input[type="date"]:focus,
@@ -128,9 +108,7 @@ textarea:focus {
 }
 
 
-/* ========================================
-   FIELDSET
-   ======================================== */
+/* FIELDSET */
 
 fieldset {
     border: none;
@@ -145,9 +123,7 @@ legend {
 }
 
 
-/* ========================================
-   CLASSIFICAÇÃO
-   ======================================== */
+/* CLASSIFICAÇÃO */
 
 .classificacao {
     margin-top: 25px;
@@ -155,70 +131,42 @@ legend {
 }
 
 
-/* ========================================
-   ESTRELAS
-   ======================================== */
+/* ESTRELAS */
 
 .estrelas {
     display: flex;
-
-    /*
-       O HTML está na ordem 5 → 1.
-       row-reverse exibe visualmente
-       as estrelas na ordem correta.
-    */
-
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
-
     gap: 6px;
     margin-top: 8px;
 }
-
 
 /* Esconde visualmente os radio buttons */
 
 .estrelas input[type="radio"] {
     position: absolute;
     opacity: 0;
-
     width: 1px;
     height: 1px;
-
     margin: 0;
 }
 
-
-/* Aparência padrão das estrelas */
-
 .estrelas label {
     display: inline-block;
-
     margin: 0;
     padding: 2px;
-
     font-size: 2.6rem;
     line-height: 1;
-
     color: #a0a0a0;
-
     cursor: pointer;
-
     transition:
         color 0.2s ease,
         transform 0.2s ease;
 }
 
 
-/* ========================================
-   ESTRELAS SELECIONADAS
-   ======================================== */
-
-/*
-   Pinta a estrela selecionada
-   e todas as anteriores.
-*/
+/* ESTRELAS SELECIONADAS */
 
 .estrelas input[type="radio"]:checked + label,
 .estrelas input[type="radio"]:checked + label ~ label {
@@ -226,9 +174,7 @@ legend {
 }
 
 
-/* ========================================
-   EFEITO AO PASSAR O MOUSE
-   ======================================== */
+/* EFEITO AO PASSAR O MOUSE */
 
 .estrelas label:hover,
 .estrelas label:hover ~ label {
@@ -240,9 +186,7 @@ legend {
 }
 
 
-/* ========================================
-   ACESSIBILIDADE DAS ESTRELAS
-   ======================================== */
+/* ACESSIBILIDADE DAS ESTRELAS */
 
 .estrelas input[type="radio"]:focus + label {
     outline: 3px solid #0066ff;
@@ -251,9 +195,7 @@ legend {
 }
 
 
-/* ========================================
-   RECURSOS ÚTEIS
-   ======================================== */
+/* RECURSOS ÚTEIS */
 
 .recursos {
     margin-top: 25px;
@@ -265,7 +207,6 @@ legend {
     font-weight: bold;
 }
 
-
 /* Texto explicativo */
 
 .instrucao {
@@ -274,71 +215,51 @@ legend {
     color: #555;
 }
 
-
 /* Opções dos recursos */
 
 .recursos label {
     display: flex;
     align-items: center;
-
     gap: 9px;
     margin: 12px 0;
-
     font-weight: normal;
-
     cursor: pointer;
 }
-
 
 /* Checkboxes */
 
 .recursos input[type="checkbox"] {
     width: 19px;
     height: 19px;
-
     margin: 0;
-
     accent-color: #5a00d6;
-
     cursor: pointer;
 }
 
-
-/* ========================================
-   BOTÃO ENVIAR
-   ======================================== */
+/*  BOTÃO ENVIAR */
 
 input[type="submit"] {
     width: 100%;
-
     margin-top: 25px;
     padding: 15px;
-
     border: none;
     border-radius: 8px;
-
     background-color: #0066ff;
     color: white;
-
     font-size: 1.05rem;
     font-weight: bold;
-
     cursor: pointer;
-
     transition:
         transform 0.2s ease,
         background-color 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-
 /* Hover do botão */
 
 input[type="submit"]:hover {
     background-color: #004dcc;
-
     transform: translateY(-2px);
-
     box-shadow: 0 5px 14px rgba(0, 102, 255, 0.35);
 }
 
@@ -358,21 +279,14 @@ input[type="submit"]:focus {
 }
 
 
-/* ========================================
-   PÁGINA DE CONFIRMAÇÃO
-   ======================================== */
+/* PÁGINA DE CONFIRMAÇÃO */
 
 .confirmacao {
     background-color: #ffffff;
-
     padding: 30px;
-
     border-radius: 14px;
-
     border-top: 6px solid #0066ff;
-
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
-
     text-align: center;
 }
 
@@ -386,35 +300,25 @@ input[type="submit"]:focus {
 }
 
 
-/* ========================================
-   CONTADOR DE AVALIAÇÕES
-   ======================================== */
+/* CONTADOR DE AVALIAÇÕES */
 
 #contador {
     font-size: 1.4rem;
     font-weight: bold;
-
     color: #0066ff;
 }
 
 
-/* ========================================
-   BOTÃO VOLTAR
-   ======================================== */
+/* BOTÃO VOLTAR */
 
 .botao-voltar {
     display: inline-block;
-
     margin-top: 20px;
     padding: 13px 22px;
-
     background-color: #0066ff;
     color: white;
-
     text-decoration: none;
-
     border-radius: 8px;
-
     font-weight: bold;
 
     transition:
@@ -437,16 +341,12 @@ input[type="submit"]:focus {
 }
 
 
-/* ========================================
-   RODAPÉ
-   ======================================== */
+/* RODAPÉ */
 
 footer {
     background-color: #5a00d6;
     color: white;
-
     text-align: center;
-
     padding: 18px;
 }
 
@@ -455,9 +355,7 @@ footer p {
 }
 
 
-/* ========================================
-   RESPONSIVIDADE
-   ======================================== */
+/* RESPONSIVIDADE */
 
 @media (max-width: 600px) {
 
