@@ -59,12 +59,11 @@ label {
     margin-bottom: 6px;
 }
 
-span {
+form span {
     font-size: 0.85rem;
     font-weight: normal;
     color: #555;
 }
-
 
 /* CAMPOS */
 
@@ -158,7 +157,7 @@ legend {
     padding: 2px;
     font-size: 2.6rem;
     line-height: 1;
-    color: #a0a0a0;
+    color: #6b6b6b;
     cursor: pointer;
     transition:
         color 0.2s ease,

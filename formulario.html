@@ -9,8 +9,7 @@
     <title>Avaliação de Produto</title>
 
     <link rel="stylesheet" href="estilos/formulario.css">
-    <script src="scripts/formulario.js" defer>
-    </script>
+    <script src="scripts/formulario.js" defer></script>
 </head>
 
 <body>
@@ -20,223 +19,83 @@
     </header>
 
     <main>
+        <form method="get" action="avaliacao.html">
 
-        <form
-            method="get"
-            action="avaliacao.html"
-        >
+            <p class="instrucao">Campos obrigatórios</p>
 
-            <label for="produto">
-                Nome do Produto
-            </label>
-
-            <select
-                id="produto"
-                name="produto"
-                required
-            >
-                <option
-                    value=""
-                    disabled
-                    selected
-                >
-                    Selecione um Produto...
-                </option>
+            <label for="produto">Nome do Produto</label>
+            <select id="produto" name="produto" required>
+                <option value="" disabled selected>Selecione um Produto...</option>
             </select>
 
             <fieldset class="classificacao">
-
-                <legend>
-                    Classificação Geral
-                </legend>
+                <legend>Classificação Geral</legend>
 
                 <div class="estrelas">
-
-                    <input
-                        type="radio"
-                        id="estrela5"
-                        name="classificacao"
-                        value="5"
-                        required
-                    >
-
+                    <input type="radio" id="estrela5" name="classificacao" value="5" required>
                     <label for="estrela5" title="5 estrelas">★</label>
 
-                    <input
-                        type="radio"
-                        id="estrela4"
-                        name="classificacao"
-                        value="4"
-                        required
-                    >
-
+                    <input type="radio" id="estrela4" name="classificacao" value="4" required>
                     <label for="estrela4" title="4 estrelas">★</label>
 
-                    <input
-                        type="radio"
-                        id="estrela3"
-                        name="classificacao"
-                        value="3"
-                        required
-                    >
-
+                    <input type="radio" id="estrela3" name="classificacao" value="3" required>
                     <label for="estrela3" title="3 estrelas">★</label>
 
-                    <input
-                        type="radio"
-                        id="estrela2"
-                        name="classificacao"
-                        value="2"
-                        required
-                    >
-
+                    <input type="radio" id="estrela2" name="classificacao" value="2" required>
                     <label for="estrela2" title="2 estrelas">★</label>
 
-                    <input
-                        type="radio"
-                        id="estrela1"
-                        name="classificacao"
-                        value="1"
-                        required
-                    >
-
+                    <input type="radio" id="estrela1" name="classificacao" value="1" required>
                     <label for="estrela1" title="1 estrela">★</label>
-
                 </div>
-
             </fieldset>
 
-            <label for="data">
-                Data de Instalação
-            </label>
-
-            <input
-                type="date"
-                id="data"
-                name="data"
-                required
-            >
+            <label for="data">Data de Instalação</label>
+            <input type="date" id="data" name="data" required>
 
             <fieldset class="recursos">
-
-                <legend>
-                    Quais recursos você achou úteis?
-                </legend>
-
-                <p class="instrucao">
-                    Marque todas as opções aplicáveis.
-                </p>
-
+                <legend>Quais recursos você achou úteis?</legend>
+                <p class="instrucao">Marque todas as opções aplicáveis.</p>
 
                 <label for="durabilidade">
-
-                    <input
-                        type="checkbox"
-                        id="durabilidade"
-                        name="recursos"
-                        value="durabilidade"
-                    >
-
+                    <input type="checkbox" id="durabilidade" name="recursos" value="durabilidade">
                     Durabilidade
-
                 </label>
-
 
                 <label for="facilidade">
-
-                    <input
-                        type="checkbox"
-                        id="facilidade"
-                        name="recursos"
-                        value="facilidade"
-                    >
-
+                    <input type="checkbox" id="facilidade" name="recursos" value="facilidade">
                     Facilidade de Uso
-
                 </label>
-
 
                 <label for="desempenho">
-
-                    <input
-                        type="checkbox"
-                        id="desempenho"
-                        name="recursos"
-                        value="desempenho"
-                    >
-
+                    <input type="checkbox" id="desempenho" name="recursos" value="desempenho">
                     Desempenho
-
                 </label>
-
 
                 <label for="design">
-
-                    <input
-                        type="checkbox"
-                        id="design"
-                        name="recursos"
-                        value="design"
-                    >
-
+                    <input type="checkbox" id="design" name="recursos" value="design">
                     Design
-
                 </label>
-
             </fieldset>
 
             <label for="avaliacao">
-
-                Avaliação Escrita
-
-                <span>
-                    (opcional)
-                </span>
-
+                Avaliação Escrita <span>(opcional)</span>
             </label>
-
-            <textarea
-                id="avaliacao"
-                name="avaliacao"
-                rows="5"
-                placeholder="Conte-nos sua experiência com o produto..."
-            ></textarea>
+            <textarea id="avaliacao" name="avaliacao" rows="5"
+                placeholder="Conte-nos sua experiência com o produto..."></textarea>
 
             <label for="nome">
-
-                Seu Nome
-
-                <span>
-                    (opcional)
-                </span>
-
+                Seu Nome <span>(opcional)</span>
             </label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
 
-            <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Digite seu nome"
-            >
-            <input
-                type="submit"
-                value="Enviar Avaliação"
-            >
+            <input type="submit" value="Enviar Avaliação">
 
         </form>
-
     </main>
 
     <footer>
-
-        <p>
-            &copy;
-            <span id="anoAtual"></span>
-            | Tiago dos Anjos | Brasil
-        </p>
-
+        <p>&copy; <span id="anoAtual"></span> | Tiago dos Anjos | Brasil</p>
         <p id="ultimaModificacao"></p>
-
     </footer>
 
 </body>
