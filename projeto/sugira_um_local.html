@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sugira um ponto turístico ou local de lazer em Garça, a Cidade Jardim de São Paulo.">
+    <meta name="author" content="Tiago dos Anjos de Oliveira">
+
+    <title>Sugira um Local | Garça - Cidade Jardim</title>
+
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <a href="index.html" class="logo">Garça - Cidade Jardim</a>
+
+            <button id="menu-button" type="button"
+                    aria-label="Abrir menu"
+                    aria-controls="menu"
+                    aria-expanded="false">☰</button>
+
+            <nav id="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="turismo.html">Turismo</a></li>
+                    <li>
+                        <a href="sugira_um_local.html" aria-current="page">
+                            Sugira um Local
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="sugestao-intro">
+            <h1>Sugira um Local</h1>
+
+            <p>
+                Você conhece algum lugar interessante em Garça
+                que merece ser divulgado? Compartilhe sua sugestão!
+            </p>
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="sugestao-secao">
+
+            <h2>Envie sua Sugestão</h2>
+
+            <form id="form-sugestao">
+
+                <div class="campo">
+                    <label for="nome">Seu nome *</label>
+
+                    <input type="text"
+                           id="nome"
+                           name="nome"
+                           placeholder="Digite seu nome"
+                           autocomplete="name"
+                           maxlength="80"
+                           required>
+                </div>
+
+                <div class="campo">
+                    <label for="local">Nome do local *</label>
+
+                    <input type="text"
+                           id="local"
+                           name="local"
+                           placeholder="Ex.: Praça, parque ou ponto turístico"
+                           maxlength="100"
+                           required>
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoria *</label>
+
+                    <select id="categoria"
+                            name="categoria"
+                            required>
+
+                        <option value="" selected disabled>
+                            Selecione uma categoria
+                        </option>
+
+                        <option value="Parque ou praça">
+                            Parque ou praça
+                        </option>
+
+                        <option value="Natureza">
+                            Natureza
+                        </option>
+
+                        <option value="Cultura e história">
+                            Cultura e história
+                        </option>
+
+                        <option value="Gastronomia">
+                            Gastronomia
+                        </option>
+
+                        <option value="Outro">
+                            Outro
+                        </option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">
+                        Por que você recomenda esse local? *
+                    </label>
+
+                    <textarea id="descricao"
+                              name="descricao"
+                              rows="5"
+                              maxlength="500"
+                              placeholder="Conte o que torna esse lugar especial..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="botao botao-enviar">
+                    Enviar Sugestão
+                </button>
+
+                <p id="mensagem-sugestao"
+                   class="mensagem-sugestao"
+                   role="status"
+                   aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <!-- SUGESTÕES SALVAS -->
+        <section class="sugestoes-recebidas">
+
+            <h2>Suas Sugestões</h2>
+
+            <p class="sugestoes-explicacao">
+                As sugestões abaixo ficam salvas neste navegador.
+                Elas não são enviadas para um servidor.
+            </p>
+
+            <p id="contador-sugestoes"></p>
+
+            <div id="lista-sugestoes" class="lista-sugestoes">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="ano-atual"></span>
+            | Tiago dos Anjos | Garça - SP
+        </p>
+
+        <p>
+            Última modificação:
+            <span id="ultima-modificacao"></span>
+        </p>
+
+        <p>
+            <a href="referencias.html">Referências</a>
+        </p>
+    </footer>
+
+</body>
+</html>

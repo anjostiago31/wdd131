@@ -1,0 +1,563 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --verde-escuro: #1B5E20;
+    --verde-claro: #C8E6C9;
+    --branco: #FFFFFF;
+    --cinza-escuro: #212121;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--cinza-escuro);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.cabecalho {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--branco);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#menu-button {
+    background: transparent;
+    color: var(--branco);
+    border: 1px solid var(--branco);
+    border-radius: 5px;
+    padding: 5px 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    width: 100%;
+}
+
+nav.aberto {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+nav a {
+    display: block;
+    padding: 12px;
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+/* IMAGEM PRINCIPAL - HERO COM SLIDESHOW */
+
+.hero {
+    position: relative;
+    min-height: 450px;
+    background-color: var(--verde-escuro);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px;
+    color: var(--branco);
+    overflow: hidden;
+}
+
+/* Área das fotografias */
+
+.hero-imagens {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Cada fotografia do slideshow */
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+/* Fotografia visível */
+
+.hero-slide.ativo {
+    opacity: 1;
+}
+
+/* Camada escura sobre as fotografias */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Texto sobre as fotografias */
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* BOTÃO SAIBA MAIS */
+
+.botao {
+    display: inline-block;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 12px 25px;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.botao:hover,
+.botao:focus-visible {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+/* SEÇÕES */
+
+.sobre,
+.locais,
+.galeria {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.sobre {
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 850px;
+    margin: 15px auto;
+}
+
+h2 {
+    text-align: center;
+    color: var(--verde-escuro);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* LOCAIS PARA VISITAR */
+
+.locais {
+    background-color: var(--verde-claro);
+    max-width: none;
+}
+
+.cards {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: var(--verde-escuro);
+    margin: 15px 10px 5px;
+}
+
+.card p {
+    padding: 0 15px 20px;
+}
+
+/* GALERIA */
+
+.galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.galeria-imagens img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: var(--branco);
+}
+
+/* RESPONSIVIDADE - TELAS MAIORES */
+
+@media (min-width: 768px) {
+
+    #menu-button {
+        display: none;
+    }
+
+    .cabecalho {
+        flex-wrap: nowrap;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 15px;
+        margin: 0;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .galeria-imagens {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .galeria-imagens img {
+        height: 200px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-slide {
+        transition: none;
+    }
+}
+
+
+/* PÁGINA TURISMO */
+
+.turismo-intro {
+    background-color: var(--verde-claro);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.turismo-intro h1 {
+    color: var(--verde-escuro);
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.turismo-intro p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.turismo-locais {
+    padding: 50px 20px;
+}
+
+.turismo-locais .cards {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.turismo-locais .card {
+    padding-bottom: 15px;
+}
+
+.turismo-locais .card p {
+    padding: 0 20px;
+}
+
+.turismo-locais .localizacao {
+    color: var(--verde-escuro);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.turismo-convite {
+    background-color: var(--verde-claro);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.turismo-convite p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+/* RESPONSIVIDADE DO TURISMO */
+
+@media (min-width: 768px) {
+    .turismo-intro h1 {
+        font-size: 3rem;
+    }
+
+    .turismo-locais .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1100px) {
+    .turismo-locais .cards {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+/* PÁGINA SUGIRA UM LOCAL */
+
+.sugestao-intro {
+    background-color: var(--verde-claro);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sugestao-intro h1 {
+    color: var(--verde-escuro);
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.sugestao-intro p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* FORMULÁRIO */
+
+.sugestao-secao {
+    max-width: 750px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+#form-sugestao {
+    background-color: #F5F9F5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--verde-escuro);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo input:focus-visible,
+.campo select:focus-visible,
+.campo textarea:focus-visible {
+    outline: 3px solid var(--verde-escuro);
+    outline-offset: 2px;
+}
+
+.botao-enviar {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.mensagem-sugestao {
+    margin-top: 15px;
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+/* SUGESTÕES RECEBIDAS */
+
+.sugestoes-recebidas {
+    background-color: var(--verde-claro);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sugestoes-explicacao {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+#contador-sugestoes {
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+.lista-sugestoes {
+    max-width: 1000px;
+    margin: 25px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.sugestao-card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow-wrap: anywhere;
+}
+
+.sugestao-card h3 {
+    color: var(--verde-escuro);
+    margin-top: 0;
+}
+
+.sugestao-card p {
+    margin: 8px 0;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 768px) {
+    .sugestao-intro h1 {
+        font-size: 3rem;
+    }
+
+    .lista-sugestoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    #form-sugestao {
+        padding: 20px;
+    }
+}

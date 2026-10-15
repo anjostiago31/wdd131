@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça Garça, a Cidade Jardim do interior de São Paulo, seus pontos turísticos, história e locais de lazer.">
+    <meta name="author" content="Tiago dos Anjos de Oliveira">
+
+    <title>Garça - Cidade Jardim | Início</title>
+
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <a href="index.html" class="logo">Garça - Cidade Jardim</a>
+
+            <button id="menu-button" type="button"
+                    aria-label="Abrir menu"
+                    aria-controls="menu"
+                    aria-expanded="false">☰</button>
+
+            <nav id="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
+                    <li><a href="turismo.html">Turismo</a></li>
+                    <li><a href="sugira_um_local.html">Sugira um Local</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Imagens principais com slideshow -->
+        <section class="hero">
+
+            <div class="hero-imagens" aria-hidden="true">
+                <div class="hero-slide ativo"></div>
+                <div class="hero-slide"></div>
+            </div>
+
+            <div class="hero-conteudo">
+                <h1>Conheça Garça</h1>
+                <p>A Cidade Jardim de São Paulo</p>
+                <a href="#sobre" class="botao">Saiba Mais</a>
+            </div>
+
+        </section>
+
+        <!-- Sobre a cidade -->
+        <section id="sobre" class="sobre">
+            <h2>Sobre Garça</h2>
+
+            <p>
+                Garça é um município localizado no interior do
+                estado de São Paulo, conhecido como Cidade Jardim.
+                A cidade possui espaços verdes, áreas de lazer
+                e atrações que fazem parte de sua história
+                e de sua identidade.
+            </p>
+
+            <p>
+                Neste site, você poderá conhecer alguns dos
+                principais pontos turísticos de Garça,
+                descobrir lugares para visitar e encontrar
+                sugestões de passeios pela cidade.
+            </p>
+        </section>
+
+        <!-- Pontos turísticos -->
+        <section class="locais">
+            <h2>Locais para Visitar</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <img src="imagens/parque_oriental1.jpg"
+                         alt="Fotografia do primeiro ponto turístico de Garça"
+                         loading="lazy" width="400" height="260">
+
+                    <h3>Local 1</h3>
+                    <p>Conheça este espaço turístico de Garça.</p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/lago_artificial.jpg"
+                         alt="Fotografia do segundo ponto turístico de Garça"
+                         loading="lazy" width="400" height="260">
+
+                    <h3>Local 2</h3>
+                    <p>Descubra mais um lugar para visitar na cidade.</p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/lago.jpg"
+                         alt="Fotografia do terceiro ponto turístico de Garça"
+                         loading="lazy" width="400" height="260">
+
+                    <h3>Local 3</h3>
+                    <p>Explore os espaços de lazer de Garça.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section class="galeria">
+            <h2>Galeria</h2>
+
+            <div class="galeria-imagens">
+                <img src="imagens/parque_oriental.jpg"
+                     alt="Paisagem de Garça"
+                     loading="lazy" width="300" height="200">
+
+                <img src="imagens/zoologico_macacos.jpg"
+                     alt="Espaço turístico de Garça"
+                     loading="lazy" width="300" height="200">
+
+                <img src="imagens/parquinho_bosque.jpg"
+                     alt="Área de lazer em Garça"
+                     loading="lazy" width="300" height="200">
+
+                <img src="imagens/rotatoria_garça.jpg"
+                     alt="Vista da cidade de Garça"
+                     loading="lazy" width="300" height="200">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="ano-atual"></span>
+            | Tiago dos Anjos | Garça - SP
+        </p>
+
+        <p>
+            Última modificação:
+            <span id="ultima-modificacao"></span>
+        </p>
+
+        <p>
+            <a href="referencias.html">Referências</a>
+        </p>
+    </footer>
+
+</body>
+</html>

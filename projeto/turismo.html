@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra os principais pontos turísticos de Garça, São Paulo, e conheça lugares para passear e aproveitar a natureza.">
+    <meta name="author" content="Tiago dos Anjos de Oliveira">
+
+    <title>Turismo | Garça - Cidade Jardim</title>
+
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <a href="index.html" class="logo">Garça - Cidade Jardim</a>
+
+            <button id="menu-button" type="button"
+                    aria-label="Abrir menu"
+                    aria-controls="menu"
+                    aria-expanded="false">☰</button>
+
+            <nav id="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="turismo.html" aria-current="page">Turismo</a></li>
+                    <li><a href="sugira_um_local.html">Sugira um Local</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="turismo-intro">
+            <h1>Turismo em Garça</h1>
+
+            <p>
+                Conheça alguns dos principais pontos turísticos
+                da Cidade Jardim. Garça oferece espaços para
+                passeios, contato com a natureza, lazer e cultura.
+            </p>
+        </section>
+
+        <!-- PONTOS TURÍSTICOS -->
+        <section class="turismo-locais">
+            <h2>Descubra Garça</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <img src="imagens/parque_oriental1.jpg"
+                         alt="Jardim Oriental de Garça"
+                         loading="lazy"
+                         width="400" height="260">
+
+                    <h3>Jardim Oriental</h3>
+
+                    <p>
+                        Um espaço que homenageia a cultura japonesa,
+                        com elementos tradicionais, como o portal
+                        torii. É um dos atrativos do complexo
+                        turístico do Lago Artificial.
+                    </p>
+
+                    <p class="localizacao">
+                        Garça - SP | Região do Lago Artificial
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/lago_artificial.jpg"
+                         alt="Lago Artificial J.K. Williams em Garça"
+                         loading="lazy"
+                         width="400" height="260">
+
+                    <h3>Lago Artificial J.K. Williams</h3>
+
+                    <p>
+                        Um dos espaços de lazer mais conhecidos
+                        da cidade. O entorno reúne áreas para
+                        passeios, paisagens, espaços culturais
+                        e opções de alimentação.
+                    </p>
+
+                    <p class="localizacao">
+                        Garça - SP | Bairro Williams
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/parquinho_bosque.jpg"
+                         alt="Área de lazer do Bosque Municipal de Garça"
+                         loading="lazy"
+                         width="400" height="260">
+
+                    <h3>Bosque Municipal</h3>
+
+                    <p>
+                        O Bosque Municipal Dr. Belírio Guimarães
+                        Brandão possui uma área preservada de
+                        Mata Atlântica, espaços de lazer,
+                        parque infantil e atividades de
+                        educação ambiental.
+                    </p>
+
+                    <p class="localizacao">
+                        Garça - SP | Rua Vital Soares
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/bosque_cerejeira_florida.webp"
+                         alt="Área verde próxima ao complexo turístico do Lago"
+                         loading="lazy"
+                         width="400" height="260">
+
+                    <h3>Bosque das Cerejeiras</h3>
+
+                    <p>
+                        Localizado no complexo turístico do Lago
+                        Artificial, o Bosque das Cerejeiras é
+                        conhecido pelas árvores que representam
+                        uma importante ligação da cidade com
+                        a cultura japonesa.
+                    </p>
+
+                    <p class="localizacao">
+                        Garça - SP | Região do Lago Artificial
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONVITE -->
+        <section class="turismo-convite">
+            <h2>Conhece outro lugar interessante?</h2>
+
+            <p>
+                Ajude a divulgar os espaços de Garça.
+                Compartilhe sua sugestão de um local
+                que merece ser conhecido.
+            </p>
+
+            <a href="sugira-um-local.html" class="botao">
+                Sugira um Local
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="ano-atual"></span>
+            | Tiago dos Anjos | Garça - SP
+        </p>
+
+        <p>
+            Última modificação:
+            <span id="ultima-modificacao"></span>
+        </p>
+
+        <p>
+            <a href="referencias.html">Referências</a>
+        </p>
+    </footer>
+
+</body>
+</html>
